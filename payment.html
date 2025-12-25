@@ -4,7 +4,38 @@
 <meta charset="UTF-8">
 <title>Emy Jubel | Payment</title>
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* MODAL PREVIEW QRIS */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(11,22,48,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.modal.active{
+  display:flex;
+}
+.modal img{
+  max-width:90%;
+  max-height:80%;
+  border-radius:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+.modal .close{
+  position:absolute;
+  top:20px;
+  right:22px;
+  font-size:28px;
+  cursor:pointer;
+  color:#EAF0FF;
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -12,31 +43,81 @@
   <a href="index.html">✕</a>
 </header>
 
+<!-- DOMPET DIGITAL -->
 <section class="card">
   <h3>Dompet Digital</h3>
-  <p>DANA</p>
-  <p>OVO</p>
-  <p>GoPay</p>
-  <p style="margin-top:10px;font-weight:600;">
+
+  <p style="margin-top:8px;">
+    DANA • OVO • GoPay
+  </p>
+
+  <p id="payNumber" style="font-weight:600;font-size:18px;margin-top:6px;">
+    083137741581
+  </p>
+
+  <button class="btn" onclick="copyNumber()">Salin Nomor</button>
+
+  <p style="margin-top:14px;font-weight:600;">
     Atas Nama:<br>
     ALFAN PRADITIYA AGUSTIANTO
   </p>
 </section>
 
+<!-- QRIS DANA -->
 <section class="card payment">
   <h3>QRIS DANA</h3>
-  <img src="https://qu.ax/k4fJW">
+  <img src="https://qu.ax/k4fJW"
+       alt="QRIS DANA"
+       style="cursor:pointer"
+       onclick="openPreview(this.src)">
+  <a class="btn" href="https://qu.ax/k4fJW" download>Download QRIS</a>
 </section>
 
+<!-- QRIS GOPAY -->
 <section class="card payment">
   <h3>QRIS GOPAY</h3>
-  <img src="https://qu.ax/OWKYg">
+  <img src="https://qu.ax/OWKYg"
+       alt="QRIS GOPAY"
+       style="cursor:pointer"
+       onclick="openPreview(this.src)">
+  <a class="btn" href="https://qu.ax/OWKYg" download>Download QRIS</a>
 </section>
 
+<!-- QRIS ALLPAY -->
 <section class="card payment">
   <h3>QRIS ALLPAY</h3>
-  <img src="https://qu.ax/q1J6l">
+  <img src="https://qu.ax/q1J6l"
+       alt="QRIS ALLPAY"
+       style="cursor:pointer"
+       onclick="openPreview(this.src)">
+  <a class="btn" href="https://qu.ax/q1J6l" download>Download QRIS</a>
 </section>
+
+<!-- MODAL PREVIEW -->
+<div class="modal" id="qrisModal" onclick="closePreview()">
+  <span class="close">✕</span>
+  <img id="qrisPreview">
+</div>
+
+<script>
+function copyNumber(){
+  const text = document.getElementById("payNumber").innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Nomor berhasil disalin");
+  });
+}
+
+function openPreview(src){
+  const modal = document.getElementById("qrisModal");
+  const img = document.getElementById("qrisPreview");
+  img.src = src;
+  modal.classList.add("active");
+}
+
+function closePreview(){
+  document.getElementById("qrisModal").classList.remove("active");
+}
+</script>
 
 </body>
 </html>
