@@ -1,163 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Emy Jubel | Official</title>
-
-<style>
-:root{
-  --bg:#0B1630;
-  --card:#12244A;
-  --accent:#2F5EDB;
-  --accent2:#4B7BFF;
-  --text:#EAF0FF;
-  --muted:#A9B8E6;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-.hero{
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.hero img{
-  width:130px;
-  border-radius:50%;
-  border:3px solid var(--accent);
-  margin-bottom:16px;
-}
-
-.hero h1{
-  font-size:32px;
-  letter-spacing:1px;
-}
-
-.hero p{
-  color:var(--muted);
-  margin-top:6px;
-}
-
-.buttons{
-  display:flex;
-  gap:14px;
-  justify-content:center;
-  margin-top:24px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:14px 26px;
-  background:var(--accent);
-  color:#fff;
-  text-decoration:none;
-  border-radius:10px;
-  font-weight:600;
-}
-
-.btn.secondary{
-  background:var(--card);
-  border:1px solid var(--accent);
-}
-
-.section{
-  margin-top:48px;
-}
-
-.section h2{
-  margin-bottom:18px;
-  font-size:22px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:16px;
-}
-
-.card{
-  background:var(--card);
-  padding:18px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.05);
-}
-
-.notice{
-  background:#0F1F3F;
-  border-left:4px solid var(--accent2);
-  padding:16px;
-  border-radius:10px;
-  color:var(--muted);
-}
-
-footer{
-  margin-top:60px;
-  text-align:center;
-  color:var(--muted);
-  font-size:14px;
-}
-</style>
+<meta charset="UTF-8">
+<title>Emy Jubel</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div class="container">
 
-  <div class="hero">
-    <img src="https://qu.ax/cgwTm" alt="Emy Jubel Logo">
-    <h1>EMY JUBEL</h1>
-    <p>Admin Region Jabar • Kuningan</p>
+<header>
+  <div class="logo">EMY JUBEL</div>
+  <div class="menu-btn">☰</div>
+</header>
 
-    <div class="buttons">
-      <a class="btn" href="https://wa.me/62895391694499">WhatsApp Utama</a>
-      <a class="btn secondary" href="https://wa.me/6283137741581">WhatsApp Backup</a>
-      <a class="btn secondary" href="links.html">All Links</a>
-    </div>
-  </div>
+<nav>
+  <a href="links.html"> Kontak Real Emy Jubel</a>
+  <a href="payment.html">Payment</a>
+  <a href="mailto:emipay@yahoo.com">Email</a>
+</nav>
 
-  <div class="section">
-    <h2>Layanan</h2>
-    <div class="cards">
-      <div class="card">Akun EPEP</div>
-      <div class="card">ALREFF 15 Hari</div>
-      <div class="card">Fast Respon</div>
-      <div class="card">Anti Clone</div>
-    </div>
-  </div>
+<section>
+  <h1>EMY JUBEL</h1>
+  <p style="margin-top:6px;">Digital Account Seller</p>
+  <p style="opacity:.8;">Admin Region Jabar — Kuningan</p>
 
-  <div class="section">
-    <h2>Rules</h2>
-    <div class="notice">
-      BUY = PAHAM<br>
-      ALREFF tidak berlaku jika akun dijual kembali oleh buyer.
-    </div>
-  </div>
+  <a class="btn" href="https://wa.me/62895391694499">WhatsApp Utama</a>
+</section>
 
-  <div class="section">
-    <h2>Anti Scam</h2>
-    <div class="notice">
-      Nomor resmi hanya:<br>
-      0895-3916-94499 (UTAMA)<br>
-      0831-3774-1581 (BACKUP)<br><br>
-      Selain itu = CLONE / SCAMMER ❌
-    </div>
-  </div>
+<section class="card">
+  <p>
+    Emy Jubel merupakan penyedia akun dan layanan digital yang berfokus
+    pada transaksi aman, transparan, dan jelas sejak awal. Seluruh stok
+    merupakan hasil buy dengan ketentuan garansi ALREFF 15 hari sesuai
+    kesepakatan.
+  </p>
+</section>
 
-  <footer>
-    © 2025 Emy Jubel
-  </footer>
+<section class="card">
+  <p>• Seluruh stok merupakan hasil buy</p>
+  <p>• Berlaku ALREFF 15 hari</p>
+  <p>• BUY = PAHAM</p>
+  <p>• Transaksi di luar kontak resmi bukan tanggung jawab admin</p>
+</section>
 
-</div>
+<section class="card">
+  <p>Kontak Resmi:</p>
+  <p>WhatsApp Utama & Cadangan</p>
+  <p>Waspada akun palsu mengatasnamakan Emy Jubel</p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
